@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int o=1,m=2,d=3,n;
+void toh(int o,int d,int m,int n)
+{
+if(n>0)
+{ toh(o,m,d,n-1);
+cout<<"Move"<<o<<"to"<<d<<endl;
+toh(m,d,o,n-1);
+}
+}
+int main()
+//(int argc, char *argv[])
+{
+cout<<"Input the number of disks:";
+cin>>n;
+toh(o,d,m,n);
+//system("PAUSE");
+//return EXIT_SUCCESS;
+}
