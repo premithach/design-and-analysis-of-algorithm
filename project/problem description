@@ -1,0 +1,14 @@
+>The shortest job first (SJF) or shortest job next, is a scheduling policy that selects the waiting process with the smallest execution time to execute next. 
+>SJN, also known as Shortest Job Next (SJN). It is the job or process scheduling algorithm that follows the non-preemptive scheduling discipline. 
+>In this, scheduler selects the process from the waiting queue with the least completion time and allocate the CPU to that job or process.
+>Shortest Job First is more desirable than FIFO algorithm because SJF is more optimal as it reduces average wait time which will increase the throughput. 
+
+•SJF algorithm can be nonpreemptive as well as non-preemptive. Preemptive scheduling is also known as shortest-remaining-time-first scheduling. 
+•In Preemptive approach, the new process arises when there is already executing process. 
+•If the burst of newly arriving process is lesser than the burst time of executing process than scheduler will preempt the execution of the process with lesser burst time. 
+
+>Completion Time is the time required by the process to complete its execution 
+>Turnaround Time is the time interval between the submission of a process and its completion. 
+>Turnaround Time = completion of a process – submission of a process 
+>Waiting Time is the difference between turnaround time and burst time 
+>Waiting Time = turnaround time – burst time 
