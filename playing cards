@@ -1,0 +1,80 @@
+#include <bits/stdc++.h>
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+class cards
+{
+ int n,i,j;
+ string a[53] ={ "B2","B3","B4","B5","B6","B7","B8","B9","B10","BAce","B-King","B-Queen","B-Jack",
+ "R2","R3","R4","R5","R6","R7","R8","R9","R10","R-Ace","RKing","R-Queen","R-Jack",
+ "G2","Y3","Y4","Y5","Y6","Y7","Y8","Y9","Y10","Y-Ace","YKing","Y-Queen","Y-Jack",
+ "W2","W3","W4","W5","W6","W7","W8","W9","W10","WAce","W-King","W-Queen","W-Jack","JOKER"};
+ string b[53] ={ "B2","B3","B4","B5","B6","B7","B8","B9","B10","BAce","B-King","B-Queen","B-Jack",
+ "R2","R3","R4","R5","R6","R7","R8","R9","R10","R-Ace","RKing","R-Queen","R-Jack",
+ "G2","Y3","Y4","Y5","Y6","Y7","Y8","Y9","Y10","Y-Ace","YKing","Y-Queen","Y-Jack",
+ "W2","W3","W4","W5","W6","W7","W8","W9","W10","WAce","W-King","W-Queen","W-Jack","JOKER"};
+public:
+//Shuffling Cards
+ void shuffle()
+ {
+ srand(time(0));
+ for (int i=0; i<53 ;i++)
+ {
+ // Random for remaining positions.
+ int r = i + (rand() % 53 -i);
+ swap(a[i], a[r]);
+ }
+ }
+//Displaying Initial cards
+ void display()
+ {
+ for (i=0;i<53;i++)
+ {
+ if(i % 13 == 0)
+ {
+ cout<<"\n";
+ }
+ cout<<b[i]<<" ";
+ }
+ }
+ //Displaying the shuffled cards
+ void display2()
+ {
+ for (i=0;i<53;i++)
+ {
+ if(i % 13 == 0)
+ {
+ cout<<"\n";
+ }
+ cout<<a[i]<<" ";
+ }
+}
+};
+int main()
+{
+ cards CARDS;
+ int choice;
+ while(1)
+ {
+ cout<<"\n | M E N U |\n";
+cout<<"\n1.Display Initial Cards";
+ cout<<"\n2.Shuffle the Cards";
+ cout<<"\n3.Display Shuffled Cards";
+ cout<<"\n4.Exit";
+cout<<"\n\nEnter your choice:";
+ cin>>choice;
+ switch(choice)
+ {
+ case 1: CARDS.display();
+ break;
+ case 2: CARDS.shuffle();
+ break;
+ case 3: CARDS.display2();
+break;
+ case 4: exit(0);
+ default: cout<<"Please ENTER a VALID Choice.....";
+ break;
+ }
+ }
+ return 0;
+}
